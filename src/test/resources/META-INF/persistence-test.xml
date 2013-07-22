@@ -1,0 +1,23 @@
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://java.sun.com/xml/ns/persistence 
+	http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="MINUTOS_PU" transaction-type="RESOURCE_LOCAL">
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!-- 	   <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
+		<class>co.com.rentavoz.entities.Menu</class>
+		
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="update"/> -->
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="jsepee1855" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/Minutos" />
+			<property name="hibernate.showSql" value="true" />
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JDBCTransactionFactory"/>
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+			<property name="hibernate.connection.pool_size" value="8"/>
+<!-- 			  <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/> -->
+		</properties>
+	</persistence-unit>
+</persistence>
